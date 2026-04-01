@@ -1,0 +1,45 @@
+{
+  "paths": {
+    "data": "data",
+    "vectorstore": "vectorstore",
+    "sources": "sources.txt",
+    "chroma": "chroma"
+  },
+  "ollama": {
+    "base_url": "http://localhost:11434",
+    "embedding_model": "nomic-embed-text",
+    "chat_model": "tinyllama"
+  },
+  "groq": {
+    "model": "llama-3.1-8b-instant",
+    "api_url": "https://api.groq.com/openai/v1/chat/completions",
+    "temperature": 0.2,
+    "max_tokens": 512,
+    "top_p": 0.85
+  },
+  "retrieval": {
+    "default_k": 3,
+    "reject_threshold": 0.78,
+    "warning_threshold": 0.75,
+    "max_context_online": 2000,
+    "max_context_offline": 1200
+  },
+  "tinyllama": {
+    "temperature": 0.2,
+    "num_predict": 192,
+    "top_k": 10,
+    "top_p": 0.85,
+    "num_thread": 4,
+    "repeat_penalty": 1.1
+  },
+  "network": {
+    "internet_check_host": "8.8.8.8",
+    "internet_check_port": 53,
+    "internet_check_timeout": 5,
+    "ollama_check_timeout": 3
+  },
+  "database": {
+    "chunk_size": 1000,
+    "chunk_overlap": 250
+  }
+}
